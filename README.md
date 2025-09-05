@@ -5,6 +5,8 @@ lies, half-truths, hopes, prayers, and encantations when using claude code.
 
 ## subagents
 
+**guilfoyle** - The legendary staff engineer who never took promotion but became the company's code deity. Used for code review, complexity reduction, and architectural guidance.
+
 ## slash commands
 
 **catchmeup** - Get a quick conversational summary of recent commits and current work status when jumping back into a project. Perfect for those "wait, what was I doing?" moments.
