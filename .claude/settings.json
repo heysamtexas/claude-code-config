@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash(git commit:*)",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash -c 'cd $(git rev-parse --show-toplevel) && uv run ruff format src/ && git add -u'"
+          }
+        ]
+      }
+    ]
+  }
+}
