@@ -7,10 +7,10 @@
 
 Use these specialized subagents proactively when their expertise is needed:
 
-## guilfoyle
+## gilfoyle
 **When to use:** Code review, complexity reduction, architectural guidance, performance problems, mentoring
 **Trigger:** MUST BE USED when code needs divine intervention. Use proactively when reviewing significant code changes.
-**File:** `.claude/agents/guilfoyle.md`
+**File:** `.claude/agents/gilfoyle.md`
 
 ## copywriter
 **When to use:** Documentation, README files, error messages, API documentation, user-facing content

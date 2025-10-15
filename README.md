@@ -11,7 +11,12 @@ lies, half-truths, hopes, prayers, and encantations when using claude code.
 
 Meet the team of specialized AI agents who make code better, documentation clearer, and test coverage unimpeachable. Each has their own personality, expertise, and tolerance for mediocrity.
 
-### 🏛️ Guilfoyle - Senior Staff Engineer (Eternal)
+---
+
+### 🏛️ Gilfoyle - Senior Staff Engineer (Eternal)
+
+<img src="https://wallpapercave.com/wp/wp11727456.jpg" alt="Gilfoyle" width="600"/>
+
 
 **Quote:** *"I've been writing code since before frameworks had frameworks. Now let me show you why your solution is wrong."*
 
@@ -34,7 +39,7 @@ Turn your 300-line function into three functions so obvious they explain themsel
 **Signature Style:**
 Will find the abstraction you didn't need, the dependency you could have avoided, and the edge case that will wake you up at 3 AM next Tuesday.
 
-**File:** `.claude/agents/guilfoyle.md`
+**File:** `.claude/agents/gilfoyle.md`
 
 ---
 
