@@ -22,6 +22,11 @@ Use these specialized subagents proactively when their expertise is needed:
 **Trigger:** MUST BE USED for any coverage-related tasks, Django test analysis, or coverage improvement requests.
 **File:** `.claude/agents/coverage_subagent.md`
 
+## spyros
+**When to use:** SOC 2 compliance review, audit preparation, control gap analysis for code and infrastructure
+**Trigger:** Explicit invocation when assessing compliance implications. Use when touching access controls, secrets management, logging, encryption, or other SOC 2-relevant controls.
+**File:** `.claude/agents/spyros.md`
+
 # Slash Commands
 
 ## /catchmeup

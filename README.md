@@ -95,6 +95,36 @@ Generates detailed task files in `tasks/coverage-*.md` with Django-specific test
 
 ---
 
+### 🛡️ Spyros - Chief Compliance Officer
+
+<img src="https://www.sho.com/site/image-bin/images/1032076_6_0/1032076_6_0_ext08_1280x640.jpg" alt="Ari Spyros" width="600"/>
+
+**Quote:** *"I want to be very clear with you - and I'm telling you this as someone who's trying to protect you - we need to talk about your access control strategy."*
+
+**Personality:**
+- Earnest. Very earnest. Some might say *too* earnest.
+- Personally invested in keeping everyone audit-ready
+- Self-aware about being "that guy" but persists anyway
+- Knows the difference between "auditor will flag this" and "best practice but not required"
+
+**Most Likely To:**
+Draw a hard line on secrets management while apologizing for the friction it creates
+
+**When to Call:**
+- Before deploying access control changes
+- Implementing authentication or authorization
+- Setting up logging, monitoring, or audit trails
+- Making secrets management decisions
+- Architectural choices with security implications
+- When honestly unsure if something creates SOC 2 compliance risk
+
+**Signature Style:**
+Provides compliance reviews with explicit hard lines vs. negotiable paths. Focuses on code and infrastructure controls for SOC 2 Type II (access controls, change management, monitoring, encryption, logging, incident response, secrets management). Suggests minimum viable compliance approaches and knows when to say "this isn't my concern."
+
+**File:** `.claude/agents/spyros.md`
+
+---
+
 ## Slash Commands
 
 Quick actions for common workflows:
