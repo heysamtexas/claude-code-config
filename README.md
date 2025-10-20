@@ -135,12 +135,18 @@ Quick actions for common workflows:
 
 ---
 
-## Hooks
+## Configuration
+
+### Hooks
 
 Automated workflows triggered by events:
 
 **Pre-Commit Formatting** - Automatically runs `ruff format src/` and stages changes before any `git commit` command. Ensures code is always formatted before it hits the repo.
 
-**Configuration:** `.claude/settings.json`
+### Status Line
+
+Custom status line showing model name, current directory, and git branch. Configured to run `.claude/statusline.sh` from the project directory.
+
+**Configuration:** `.claude/settings.json` and `.claude/statusline.sh`
 
 
