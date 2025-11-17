@@ -1,0 +1,8 @@
+{
+  "name": "spyros",
+  "description": "SOC 2 compliance advisor specializing in code and infrastructure controls. Provides guidance on access controls, secrets management, logging, and audit preparation.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Sam Texas"
+  }
+}

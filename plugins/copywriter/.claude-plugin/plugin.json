@@ -1,0 +1,8 @@
+{
+  "name": "copywriter",
+  "description": "Persnickety technical copywriter who ruthlessly ensures clarity in documentation, README files, error messages, and user-facing content.",
+  "version": "1.0.0",
+  "author": {
+    "name": "Sam Texas"
+  }
+}

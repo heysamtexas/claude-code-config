@@ -5,6 +5,58 @@ lies, half-truths, hopes, prayers, and encantations when using claude code.
 
 ---
 
+## Installation
+
+This repository is a Claude Code plugin marketplace. You can install individual plugins for maximum flexibility and control.
+
+### Add the Marketplace
+
+```bash
+/plugin marketplace add samtexas/claude-code-config
+```
+
+Or for local development:
+
+```bash
+/plugin marketplace add /path/to/claude-code-config
+```
+
+### Install Plugins
+
+Install what you need, when you need it:
+
+```bash
+# Install individual agents
+/plugin install gilfoyle
+/plugin install copywriter
+/plugin install coverage-enforcer
+/plugin install spyros
+
+# Install productivity commands
+/plugin install sam-texas-commands
+
+# Install development hooks (pre-commit formatting, statusline)
+/plugin install sam-texas-devtools
+```
+
+### Manage Plugins
+
+```bash
+# Browse available plugins
+/plugin
+
+# Enable/disable plugins independently
+/plugin disable gilfoyle
+/plugin enable gilfoyle
+
+# Remove plugins you no longer need
+/plugin uninstall coverage-enforcer
+```
+
+**Note:** The `sam-texas-devtools` plugin assumes your project has a `src/` directory for Python formatting. The statusline requires git for branch display.
+
+---
+
 ## The Subagent Yearbook 📸
 
 *Class of Claude Code 2025*

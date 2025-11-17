@@ -1,0 +1,36 @@
+{
+  "name": "sam-texas-marketplace",
+  "description": "Sam Texas's collection of specialized Claude Code agents, productivity commands, and development tools",
+  "plugins": [
+    {
+      "path": "plugins/gilfoyle",
+      "name": "gilfoyle",
+      "description": "Legendary staff engineer for code review, complexity reduction, and architectural guidance"
+    },
+    {
+      "path": "plugins/copywriter",
+      "name": "copywriter",
+      "description": "Technical copywriter ensuring clarity in documentation and user-facing content"
+    },
+    {
+      "path": "plugins/coverage-enforcer",
+      "name": "coverage-enforcer",
+      "description": "Django test coverage analysis and enforcement with improvement planning"
+    },
+    {
+      "path": "plugins/spyros",
+      "name": "spyros",
+      "description": "SOC 2 compliance advisor for code and infrastructure controls"
+    },
+    {
+      "path": "plugins/sam-texas-commands",
+      "name": "sam-texas-commands",
+      "description": "Productivity commands: /catchmeup and /auditclaudemd"
+    },
+    {
+      "path": "plugins/sam-texas-devtools",
+      "name": "sam-texas-devtools",
+      "description": "Development workflow hooks and custom statusline"
+    }
+  ]
+}
