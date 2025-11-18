@@ -28,19 +28,22 @@ Shows model name, current directory, and git branch in your Claude Code status l
 
 ## Manual Setup Required: Status Line
 
-The statusline is included in this plugin but requires manual configuration in your `.claude/settings.json`:
+After installing this plugin, the statusline script will be located at:
+`.claude/plugins/sam-texas-devtools/statusline.sh`
+
+Add this configuration to your `.claude/settings.json`:
 
 ```json
 {
   "statusLine": {
     "type": "command",
-    "command": "statusline.sh",
+    "command": ".claude/plugins/sam-texas-devtools/statusline.sh",
     "padding": 0
   }
 }
 ```
 
-**Note:** The path may vary depending on where the plugin installs the script. You might need to adjust the path to the statusline.sh script.
+**Verification:** Restart Claude Code or reload settings to see the statusline appear.
 
 ## Customization
 

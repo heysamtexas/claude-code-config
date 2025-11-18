@@ -9,11 +9,23 @@ lies, half-truths, hopes, prayers, and encantations when using claude code.
 
 This repository is a Claude Code plugin marketplace. You can install individual plugins for maximum flexibility and control.
 
+### Prerequisites
+
+Before installing plugins, ensure you have:
+- **Claude Code** (latest version recommended)
+- **Git** (required for statusline branch display)
+- **Python environment** (for sam-texas-devtools plugin only):
+  - `uv` package manager
+  - `ruff` formatter
+  - Project with `src/` directory (or customize the hook path)
+
 ### Add the Marketplace
 
 ```bash
 /plugin marketplace add samtexas/claude-code-config
 ```
+
+This creates a marketplace named **sam-texas-marketplace** based on the repository's marketplace.json.
 
 Or for local development:
 
@@ -23,20 +35,26 @@ Or for local development:
 
 ### Install Plugins
 
-Install what you need, when you need it:
+Install what you need from the sam-texas-marketplace:
 
 ```bash
 # Install individual agents
-/plugin install gilfoyle
-/plugin install copywriter
-/plugin install coverage-enforcer
-/plugin install spyros
+/plugin install gilfoyle@sam-texas-marketplace
+/plugin install copywriter@sam-texas-marketplace
+/plugin install coverage-enforcer@sam-texas-marketplace
+/plugin install spyros@sam-texas-marketplace
 
 # Install productivity commands
-/plugin install sam-texas-commands
+/plugin install sam-texas-commands@sam-texas-marketplace
 
 # Install development hooks (pre-commit formatting, statusline)
-/plugin install sam-texas-devtools
+/plugin install sam-texas-devtools@sam-texas-marketplace
+```
+
+If this is your only marketplace, you can omit the `@sam-texas-marketplace` suffix:
+
+```bash
+/plugin install gilfoyle
 ```
 
 ### Manage Plugins
@@ -53,7 +71,37 @@ Install what you need, when you need it:
 /plugin uninstall coverage-enforcer
 ```
 
-**Note:** The `sam-texas-devtools` plugin assumes your project has a `src/` directory for Python formatting. The statusline requires git for branch display.
+### Verify Installation
+
+After installing plugins, confirm they're active:
+
+```bash
+# List all installed plugins
+/plugin list
+
+# Verify agents are available by invoking them
+# Example: Ask Claude to use Gilfoyle for code review
+```
+
+### Troubleshooting
+
+**Plugin not found after installation**
+- Verify marketplace was added: `/plugin marketplace list`
+- Check plugin name spelling matches exactly
+- Try with full syntax: `/plugin install gilfoyle@sam-texas-marketplace`
+
+**Pre-commit hook not working** (sam-texas-devtools)
+- Confirm `uv` is installed and in PATH
+- Verify `src/` directory exists in project root
+- Test manually: `uv run ruff format src/`
+- Customize path in `.claude/settings.json` if your code is not in `src/`
+
+**Statusline not showing** (sam-texas-devtools)
+- Verify `.claude/settings.json` includes statusLine configuration (see plugin README)
+- Check script is executable: `ls -la .claude/plugins/sam-texas-devtools/statusline.sh`
+- Requires git repository for branch display
+
+**Note:** The `sam-texas-devtools` plugin requires a Python environment with `uv` and `ruff`. Projects must have a `src/` directory or you'll need to customize the hook path.
 
 ---
 
