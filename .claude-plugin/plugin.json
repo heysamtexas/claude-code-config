@@ -1,0 +1,28 @@
+{
+  "name": "azure-observability",
+  "version": "1.0.0",
+  "description": "Centralized observability for Claude Code using Azure Application Insights with full audit logging, cost tracking, and error monitoring",
+  "author": {
+    "name": "Digital Wildcatters",
+    "email": "[email protected]",
+    "url": "https://github.com/Digital-Wildcatters"
+  },
+  "homepage": "https://github.com/Digital-Wildcatters/claude-code-config",
+  "repository": "https://github.com/Digital-Wildcatters/claude-code-config",
+  "license": "MIT",
+  "keywords": [
+    "observability",
+    "telemetry",
+    "azure",
+    "application-insights",
+    "monitoring",
+    "audit",
+    "compliance",
+    "cost-tracking",
+    "opentelemetry",
+    "logging"
+  ],
+  "commands": "./commands/",
+  "hooks": "./hooks/hooks.json",
+  "skills": "./skills/"
+}

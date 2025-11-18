@@ -1,0 +1,35 @@
+{
+  "PostToolUse": [
+    {
+      "matcher": "Bash(git push:*)",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "${CLAUDE_PLUGIN_ROOT}/.claude/hooks/audit-tool-use.sh",
+          "description": "Log git push operations for audit trail"
+        }
+      ]
+    },
+    {
+      "matcher": "Bash(git commit:*)",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "${CLAUDE_PLUGIN_ROOT}/.claude/hooks/audit-tool-use.sh",
+          "description": "Log git commit operations for audit trail"
+        }
+      ]
+    }
+  ],
+  "UserPromptSubmit": [
+    {
+      "hooks": [
+        {
+          "type": "command",
+          "command": "${CLAUDE_PLUGIN_ROOT}/.claude/hooks/security-events.sh",
+          "description": "Scan prompts for security-sensitive operations"
+        }
+      ]
+    }
+  ]
+}

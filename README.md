@@ -201,4 +201,87 @@ Custom status line showing model name, current directory, and git branch. Config
 
 **Configuration:** `.claude/settings.json` and `.claude/statusline.sh`
 
+---
+
+## Observability & Telemetry
+
+Track Claude Code usage across your organization with centralized logging and metrics in Azure Application Insights.
+
+### What Gets Tracked
+
+- **Usage Metrics**: Sessions, tool calls, lines of code modified, PRs/commits created
+- **Audit Logs**: Complete user prompts, tool execution, file modifications, git operations
+- **Error Tracking**: Failed operations, API errors, timeout events
+- **Cost Tracking**: Token consumption and USD costs per user/team/project
+
+### Quick Start
+
+**Option A: Install as Plugin (Recommended)**
+
+```bash
+# 1. Add this repo as a marketplace (one-time)
+/plugin marketplace add https://github.com/Digital-Wildcatters/claude-code-config
+
+# 2. Install the plugin
+/plugin install azure-observability@Digital-Wildcatters
+
+# 3. Run interactive setup
+/setup-observability
+
+# 4. Validate configuration
+/validate-telemetry
+```
+
+**Option B: Manual Setup**
+
+1. **Set up Azure infrastructure**
+   ```bash
+   # Automated setup
+   ./scripts/get-azure-credentials.sh
+   ```
+
+2. **Configure telemetry**
+   ```bash
+   cp templates/.env.example .env
+   # Edit .env with your Azure credentials
+
+   cp templates/settings.example.json .claude/settings.json
+   # Update settings.json with your team/project details
+   ```
+
+3. **Validate setup**
+   ```bash
+   ./scripts/validate-telemetry.sh
+   ```
+
+### Privacy Notice
+
+**Important**: Claude Code usage monitoring is enabled in this configuration, including full prompt logging for audit compliance. See [docs/PRIVACY_NOTICE.md](docs/PRIVACY_NOTICE.md) for details on what's collected, who has access, and your rights.
+
+### Documentation
+
+- **[OBSERVABILITY.md](docs/OBSERVABILITY.md)** - Complete setup guide
+- **[AZURE_SETUP.md](docs/AZURE_SETUP.md)** - Azure infrastructure provisioning
+- **[PRIVACY_NOTICE.md](docs/PRIVACY_NOTICE.md)** - User disclosure & privacy policy
+- **[TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md)** - Common issues and solutions
+
+### Plugin Commands
+
+When installed as a plugin, you get these slash commands:
+
+- **`/setup-observability`** - Interactive Azure setup wizard
+- **`/validate-telemetry`** - Verify configuration and test connectivity
+- **`/observability-status`** - Show current telemetry configuration
+- **`/view-privacy-notice`** - Display privacy disclosure
+- **`/azure-dashboard`** - KQL queries and dashboard templates
+
+### Configuration Files
+
+- `templates/settings.example.json` - Example OTel configuration with full prompt logging
+- `templates/.env.example` - Environment variable template
+- `.claude/hooks/audit-tool-use.sh` - Custom audit logging for git operations
+- `.claude/hooks/security-events.sh` - Security-sensitive operation detection
+
+---
+
 

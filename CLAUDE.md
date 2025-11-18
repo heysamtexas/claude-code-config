@@ -71,6 +71,80 @@ Review this CLAUDE.md file against current Claude Code best practices. Searches 
 **Script:** `.claude/statusline.sh` (local), `plugins/sam-texas-devtools/statusline.sh` (distribution)
 **Note:** Statusline configuration must be manually added to `.claude/settings.json` after installing the plugin
 
+## Audit Tool Use
+**Trigger:** Git operations (`git push`, `git commit`)
+**Action:** Logs tool execution details for audit trail
+**Output:** Local logs in `~/.claude/audit-logs/`
+**Config:** `.claude/hooks/audit-tool-use.sh`
+
+## Security Events Detection
+**Trigger:** Every user prompt submission
+**Action:** Scans for security-sensitive keywords and logs potential security events
+**Output:** Local logs in `~/.claude/security-logs/`
+**Config:** `.claude/hooks/security-events.sh`
+
+# Observability & Telemetry
+
+This repository is structured as a Claude Code plugin providing Azure Application Insights integration for centralized observability.
+
+## Plugin Installation
+
+Install this as a plugin for easy team-wide distribution:
+
+```bash
+/plugin marketplace add https://github.com/Digital-Wildcatters/claude-code-config
+/plugin install azure-observability@Digital-Wildcatters
+```
+
+After installation, use slash commands:
+- `/setup-observability` - Interactive Azure setup
+- `/validate-telemetry` - Verify configuration
+- `/observability-status` - Check current status
+- `/view-privacy-notice` - Privacy disclosure
+- `/azure-dashboard` - Dashboard queries and templates
+
+## Configuration Files
+
+- `templates/settings.example.json` - Example OpenTelemetry configuration template
+- `templates/.env.example` - Environment variable template for Azure credentials
+- `docs/OBSERVABILITY.md` - Complete setup guide
+- `docs/PRIVACY_NOTICE.md` - User disclosure and privacy policy
+
+## What Gets Tracked
+
+When telemetry is enabled (`CLAUDE_CODE_ENABLE_TELEMETRY=1`):
+
+**Usage Metrics:**
+- Sessions initiated, active time, model selection
+- Tool calls, lines of code modified, PRs/commits created
+
+**Audit Logs** (with `OTEL_LOG_USER_PROMPTS=1`):
+- Complete user prompts (what users ask Claude to do)
+- Tool execution details (commands run, files modified)
+- Git operations (commits, pushes, pull requests)
+
+**Error Tracking:**
+- Failed tool calls, API errors, timeouts
+- Hook execution failures
+
+**Cost Tracking:**
+- Token consumption (input/output/cache)
+- USD costs per session, aggregated by team/project
+
+## Setup Quick Reference
+
+**As Plugin:**
+1. `/plugin install azure-observability@Digital-Wildcatters`
+2. `/setup-observability`
+3. `/validate-telemetry`
+
+**Manual:**
+1. Provision Azure resources: `./scripts/get-azure-credentials.sh`
+2. Configure settings: Copy `templates/settings.example.json` to `.claude/settings.json`
+3. Validate: `./scripts/validate-telemetry.sh`
+
+See `docs/OBSERVABILITY.md` for detailed setup instructions.
+
 # Guidelines
 
 ## Code Style

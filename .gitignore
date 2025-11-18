@@ -1,2 +1,12 @@
 # IDE
 .idea/
+
+# Environment variables (contains Azure credentials)
+.env
+
+# Local Claude Code settings (user-specific overrides)
+.claude/settings.local.json
+
+# Local audit and security logs
+.claude/audit-logs/
+.claude/security-logs/

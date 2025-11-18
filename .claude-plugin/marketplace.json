@@ -1,0 +1,13 @@
+{
+  "name": "local-test",
+  "description": "Local marketplace for testing Azure Observability plugin",
+  "owner": {
+    "name": "Your Organization"
+  },
+  "plugins": [
+    {
+      "name": "azure-observability",
+      "source": "."
+    }
+  ]
+}

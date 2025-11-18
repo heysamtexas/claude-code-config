@@ -1,0 +1,50 @@
+{
+  "$schema": "https://cdn.jsdelivr.net/gh/anthropics/claude-code@main/schema/settings.schema.json",
+  "env": {
+    "CLAUDE_CODE_ENABLE_TELEMETRY": "1",
+    "OTEL_LOG_USER_PROMPTS": "1",
+    "OTEL_EXPORTER_OTLP_ENDPOINT": "https://YOUR_APP_INSIGHTS_ENDPOINT.azure.com/v1/traces",
+    "OTEL_EXPORTER_OTLP_HEADERS": "Authorization=YOUR_APPLICATION_INSIGHTS_CONNECTION_STRING",
+    "OTEL_EXPORTER_OTLP_PROTOCOL": "grpc",
+    "OTEL_METRICS_EXPORTER": "otlp",
+    "OTEL_LOGS_EXPORTER": "otlp",
+    "OTEL_METRIC_EXPORT_INTERVAL_MILLIS": "60000",
+    "OTEL_LOG_EXPORT_INTERVAL_MILLIS": "5000",
+    "OTEL_RESOURCE_ATTRIBUTES": "team=YOUR_TEAM_NAME,project=YOUR_PROJECT_NAME,env=production"
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Bash(git push:*)",
+        "hooks": [
+          {
+            "type": "command",
+            "command": ".claude/hooks/audit-tool-use.sh",
+            "description": "Log git push operations for audit trail"
+          }
+        ]
+      },
+      {
+        "matcher": "Bash(git commit:*)",
+        "hooks": [
+          {
+            "type": "command",
+            "command": ".claude/hooks/audit-tool-use.sh",
+            "description": "Log git commit operations for audit trail"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": ".claude/hooks/security-events.sh",
+            "description": "Scan prompts for security-sensitive operations"
+          }
+        ]
+      }
+    ]
+  }
+}
