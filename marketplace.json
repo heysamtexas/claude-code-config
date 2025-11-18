@@ -31,6 +31,11 @@
       "path": "plugins/sam-texas-devtools",
       "name": "sam-texas-devtools",
       "description": "Development workflow hooks and custom statusline"
+    },
+    {
+      "path": "plugins/azure-observability",
+      "name": "azure-observability",
+      "description": "Centralized observability for Claude Code using Azure Application Insights with full audit logging, cost tracking, and error monitoring"
     }
   ]
 }

@@ -268,10 +268,10 @@ Track Claude Code usage across your organization with centralized logging and me
 
 ```bash
 # 1. Add this repo as a marketplace (one-time)
-/plugin marketplace add https://github.com/Digital-Wildcatters/claude-code-config
+/plugin marketplace add Digital-Wildcatters/claude-code-config
 
-# 2. Install the plugin
-/plugin install azure-observability@Digital-Wildcatters
+# 2. Install the azure-observability plugin
+/plugin install azure-observability
 
 # 3. Run interactive setup
 /setup-observability
@@ -285,33 +285,33 @@ Track Claude Code usage across your organization with centralized logging and me
 1. **Set up Azure infrastructure**
    ```bash
    # Automated setup
-   ./scripts/get-azure-credentials.sh
+   ./plugins/azure-observability/scripts/get-azure-credentials.sh
    ```
 
 2. **Configure telemetry**
    ```bash
-   cp templates/.env.example .env
+   cp plugins/azure-observability/templates/.env.example .env
    # Edit .env with your Azure credentials
 
-   cp templates/settings.example.json .claude/settings.json
+   cp plugins/azure-observability/templates/settings.example.json .claude/settings.json
    # Update settings.json with your team/project details
    ```
 
 3. **Validate setup**
    ```bash
-   ./scripts/validate-telemetry.sh
+   ./plugins/azure-observability/scripts/validate-telemetry.sh
    ```
 
 ### Privacy Notice
 
-**Important**: Claude Code usage monitoring is enabled in this configuration, including full prompt logging for audit compliance. See [docs/PRIVACY_NOTICE.md](docs/PRIVACY_NOTICE.md) for details on what's collected, who has access, and your rights.
+**Important**: Claude Code usage monitoring is enabled in this configuration, including full prompt logging for audit compliance. See [PRIVACY_NOTICE.md](plugins/azure-observability/docs/PRIVACY_NOTICE.md) for details on what's collected, who has access, and your rights.
 
 ### Documentation
 
-- **[OBSERVABILITY.md](docs/OBSERVABILITY.md)** - Complete setup guide
-- **[AZURE_SETUP.md](docs/AZURE_SETUP.md)** - Azure infrastructure provisioning
-- **[PRIVACY_NOTICE.md](docs/PRIVACY_NOTICE.md)** - User disclosure & privacy policy
-- **[TROUBLESHOOTING.md](docs/TROUBLESHOOTING.md)** - Common issues and solutions
+- **[OBSERVABILITY.md](plugins/azure-observability/docs/OBSERVABILITY.md)** - Complete setup guide
+- **[AZURE_SETUP.md](plugins/azure-observability/docs/AZURE_SETUP.md)** - Azure infrastructure provisioning
+- **[PRIVACY_NOTICE.md](plugins/azure-observability/docs/PRIVACY_NOTICE.md)** - User disclosure & privacy policy
+- **[TROUBLESHOOTING.md](plugins/azure-observability/docs/TROUBLESHOOTING.md)** - Common issues and solutions
 
 ### Plugin Commands
 
@@ -325,8 +325,8 @@ When installed as a plugin, you get these slash commands:
 
 ### Configuration Files
 
-- `templates/settings.example.json` - Example OTel configuration with full prompt logging
-- `templates/.env.example` - Environment variable template
+- `plugins/azure-observability/templates/settings.example.json` - Example OTel configuration with full prompt logging
+- `plugins/azure-observability/templates/.env.example` - Environment variable template
 - `.claude/hooks/audit-tool-use.sh` - Custom audit logging for git operations
 - `.claude/hooks/security-events.sh` - Security-sensitive operation detection
 

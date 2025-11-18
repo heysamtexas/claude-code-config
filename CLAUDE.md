@@ -92,8 +92,8 @@ This repository is structured as a Claude Code plugin providing Azure Applicatio
 Install this as a plugin for easy team-wide distribution:
 
 ```bash
-/plugin marketplace add https://github.com/Digital-Wildcatters/claude-code-config
-/plugin install azure-observability@Digital-Wildcatters
+/plugin marketplace add Digital-Wildcatters/claude-code-config
+/plugin install azure-observability
 ```
 
 After installation, use slash commands:
@@ -105,10 +105,10 @@ After installation, use slash commands:
 
 ## Configuration Files
 
-- `templates/settings.example.json` - Example OpenTelemetry configuration template
-- `templates/.env.example` - Environment variable template for Azure credentials
-- `docs/OBSERVABILITY.md` - Complete setup guide
-- `docs/PRIVACY_NOTICE.md` - User disclosure and privacy policy
+- `plugins/azure-observability/templates/settings.example.json` - Example OpenTelemetry configuration template
+- `plugins/azure-observability/templates/.env.example` - Environment variable template for Azure credentials
+- `plugins/azure-observability/docs/OBSERVABILITY.md` - Complete setup guide
+- `plugins/azure-observability/docs/PRIVACY_NOTICE.md` - User disclosure and privacy policy
 
 ## What Gets Tracked
 
@@ -134,16 +134,16 @@ When telemetry is enabled (`CLAUDE_CODE_ENABLE_TELEMETRY=1`):
 ## Setup Quick Reference
 
 **As Plugin:**
-1. `/plugin install azure-observability@Digital-Wildcatters`
+1. `/plugin install azure-observability`
 2. `/setup-observability`
 3. `/validate-telemetry`
 
 **Manual:**
-1. Provision Azure resources: `./scripts/get-azure-credentials.sh`
-2. Configure settings: Copy `templates/settings.example.json` to `.claude/settings.json`
-3. Validate: `./scripts/validate-telemetry.sh`
+1. Provision Azure resources: `./plugins/azure-observability/scripts/get-azure-credentials.sh`
+2. Configure settings: Copy `plugins/azure-observability/templates/settings.example.json` to `.claude/settings.json`
+3. Validate: `./plugins/azure-observability/scripts/validate-telemetry.sh`
 
-See `docs/OBSERVABILITY.md` for detailed setup instructions.
+See `plugins/azure-observability/docs/OBSERVABILITY.md` for detailed setup instructions.
 
 # Guidelines
 

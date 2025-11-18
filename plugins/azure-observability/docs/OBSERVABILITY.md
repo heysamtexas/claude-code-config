@@ -34,10 +34,10 @@ Before setting up observability, you need:
 
 ```bash
 # 1. Add this repo as a marketplace (one-time)
-/plugin marketplace add https://github.com/Digital-Wildcatters/claude-code-config
+/plugin marketplace add Digital-Wildcatters/claude-code-config
 
 # 2. Install the Azure Observability plugin
-/plugin install azure-observability@Digital-Wildcatters
+/plugin install azure-observability
 
 # 3. Run interactive setup
 /setup-observability
@@ -57,8 +57,9 @@ Before setting up observability, you need:
 Obtain your Application Insights connection string from the Azure Portal:
 
 ```bash
-# Use helper script
-./scripts/get-azure-credentials.sh
+# Use helper script (if installed via plugin, scripts are available in plugin root)
+# From repo root: ./plugins/azure-observability/scripts/get-azure-credentials.sh
+# Or use /setup-observability command if plugin is installed
 
 # Or manually:
 # Azure Portal > Application Insights > Properties
@@ -70,7 +71,8 @@ Obtain your Application Insights connection string from the Azure Portal:
 Copy the example environment file and fill in your Azure credentials:
 
 ```bash
-cp templates/.env.example .env
+# From repo root:
+cp plugins/azure-observability/templates/.env.example .env
 ```
 
 Edit `.env` and set:
