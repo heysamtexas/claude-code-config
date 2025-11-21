@@ -1,7 +1,6 @@
-# About this project
+# Claude Code Enterprise Configuration
 
-this is where i save and share all my claude subagents, configs, tips, tricks,
-lies, half-truths, hopes, prayers, and encantations when using claude code.
+Enterprise-grade Claude Code configuration for team environments. Includes specialized AI agents, observability integrations, compliance tooling, and productivity automation.
 
 ---
 
@@ -14,7 +13,7 @@ This repository is a Claude Code plugin marketplace. You can install individual 
 Before installing plugins, ensure you have:
 - **Claude Code** (latest version recommended)
 - **Git** (required for statusline branch display)
-- **Python environment** (for sam-texas-devtools plugin only):
+- **Python environment** (for collide-devtools plugin only):
   - `uv` package manager
   - `ruff` formatter
   - Project with `src/` directory (or customize the hook path)
@@ -22,10 +21,10 @@ Before installing plugins, ensure you have:
 ### Add the Marketplace
 
 ```bash
-/plugin marketplace add samtexas/claude-code-config
+/plugin marketplace add Digital-Wildcatters/claude-code-config
 ```
 
-This creates a marketplace named **sam-texas-marketplace** based on the repository's marketplace.json.
+This creates a marketplace named **collide-marketplace** based on the repository's marketplace.json.
 
 Or for local development:
 
@@ -35,23 +34,23 @@ Or for local development:
 
 ### Install Plugins
 
-Install what you need from the sam-texas-marketplace:
+Install what you need from the collide-marketplace:
 
 ```bash
 # Install individual agents
-/plugin install gilfoyle@sam-texas-marketplace
-/plugin install copywriter@sam-texas-marketplace
-/plugin install coverage-enforcer@sam-texas-marketplace
-/plugin install spyros@sam-texas-marketplace
+/plugin install gilfoyle@collide-marketplace
+/plugin install copywriter@collide-marketplace
+/plugin install coverage-enforcer@collide-marketplace
+/plugin install spyros@collide-marketplace
 
 # Install productivity commands
-/plugin install sam-texas-commands@sam-texas-marketplace
+/plugin install collide-commands@collide-marketplace
 
 # Install development hooks (pre-commit formatting, statusline)
-/plugin install sam-texas-devtools@sam-texas-marketplace
+/plugin install collide-devtools@collide-marketplace
 ```
 
-If this is your only marketplace, you can omit the `@sam-texas-marketplace` suffix:
+If this is your only marketplace, you can omit the `@collide-marketplace` suffix:
 
 ```bash
 /plugin install gilfoyle
@@ -88,20 +87,20 @@ After installing plugins, confirm they're active:
 **Plugin not found after installation**
 - Verify marketplace was added: `/plugin marketplace list`
 - Check plugin name spelling matches exactly
-- Try with full syntax: `/plugin install gilfoyle@sam-texas-marketplace`
+- Try with full syntax: `/plugin install gilfoyle@collide-marketplace`
 
-**Pre-commit hook not working** (sam-texas-devtools)
+**Pre-commit hook not working** (collide-devtools)
 - Confirm `uv` is installed and in PATH
 - Verify `src/` directory exists in project root
 - Test manually: `uv run ruff format src/`
 - Customize path in `.claude/settings.json` if your code is not in `src/`
 
-**Statusline not showing** (sam-texas-devtools)
+**Statusline not showing** (collide-devtools)
 - Verify `.claude/settings.json` includes statusLine configuration (see plugin README)
-- Check script is executable: `ls -la .claude/plugins/sam-texas-devtools/statusline.sh`
+- Check script is executable: `ls -la .claude/plugins/collide-devtools/statusline.sh`
 - Requires git repository for branch display
 
-**Note:** The `sam-texas-devtools` plugin requires a Python environment with `uv` and `ruff`. Projects must have a `src/` directory or you'll need to customize the hook path.
+**Note:** The `collide-devtools` plugin requires a Python environment with `uv` and `ruff`. Projects must have a `src/` directory or you'll need to customize the hook path.
 
 ---
 
@@ -332,4 +331,6 @@ When installed as a plugin, you get these slash commands:
 
 ---
 
+## Attribution
 
+Originally forked from [heysamtexas/claude-code-config](https://github.com/heysamtexas/claude-code-config) (MIT License). This repository has diverged significantly and is now proprietary software owned by Digital-Wildcatters.

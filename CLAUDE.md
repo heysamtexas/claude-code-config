@@ -9,8 +9,8 @@ This repository serves dual purposes:
 - `plugins/copywriter/` - Documentation agent plugin
 - `plugins/coverage-enforcer/` - Django coverage agent plugin
 - `plugins/spyros/` - SOC 2 compliance agent plugin
-- `plugins/sam-texas-commands/` - Slash commands plugin
-- `plugins/sam-texas-devtools/` - Hooks and statusline plugin
+- `plugins/collide-commands/` - Slash commands plugin
+- `plugins/collide-devtools/` - Hooks and statusline plugin
 - `marketplace.json` - Marketplace configuration
 
 ## Local Development Structure
@@ -48,7 +48,7 @@ Use these specialized subagents proactively when their expertise is needed:
 
 # Slash Commands
 
-**Plugin:** `sam-texas-commands`
+**Plugin:** `collide-commands`
 
 ## /catchmeup
 Get a conversational summary of recent commits and current work status. Perfect for returning to a project after time away.
@@ -58,17 +58,17 @@ Review this CLAUDE.md file against current Claude Code best practices. Searches 
 
 # Hooks
 
-**Plugin:** `sam-texas-devtools`
+**Plugin:** `collide-devtools`
 
 ## Pre-Commit Formatting
 **Trigger:** Any `git commit` command
 **Action:** Runs `ruff format src/` and stages changes automatically
 **Requirements:** Project must have `src/` directory with Python files
-**Config:** `.claude/settings.json` (local), `plugins/sam-texas-devtools/hooks/hooks.json` (distribution)
+**Config:** `.claude/settings.json` (local), `plugins/collide-devtools/hooks/hooks.json` (distribution)
 
 ## Custom Status Line
 **Display:** Shows model name, current directory, and git branch
-**Script:** `.claude/statusline.sh` (local), `plugins/sam-texas-devtools/statusline.sh` (distribution)
+**Script:** `.claude/statusline.sh` (local), `plugins/collide-devtools/statusline.sh` (distribution)
 **Note:** Statusline configuration must be manually added to `.claude/settings.json` after installing the plugin
 
 ## Audit Tool Use

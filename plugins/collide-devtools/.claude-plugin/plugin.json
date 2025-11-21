@@ -1,8 +1,8 @@
 {
-  "name": "sam-texas-devtools",
+  "name": "collide-devtools",
   "description": "Development workflow hooks: pre-commit formatting with ruff and custom statusline showing model, directory, and git branch.",
   "version": "1.0.0",
   "author": {
-    "name": "Sam Texas"
+    "name": "Digital-Wildcatters"
   }
 }

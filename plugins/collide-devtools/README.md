@@ -1,4 +1,4 @@
-# sam-texas-devtools Plugin
+# collide-devtools Plugin
 
 Development workflow automation: pre-commit formatting and custom statusline.
 
@@ -29,7 +29,7 @@ Shows model name, current directory, and git branch in your Claude Code status l
 ## Manual Setup Required: Status Line
 
 After installing this plugin, the statusline script will be located at:
-`.claude/plugins/sam-texas-devtools/statusline.sh`
+`.claude/plugins/collide-devtools/statusline.sh`
 
 Add this configuration to your `.claude/settings.json`:
 
@@ -37,7 +37,7 @@ Add this configuration to your `.claude/settings.json`:
 {
   "statusLine": {
     "type": "command",
-    "command": ".claude/plugins/sam-texas-devtools/statusline.sh",
+    "command": ".claude/plugins/collide-devtools/statusline.sh",
     "padding": 0
   }
 }

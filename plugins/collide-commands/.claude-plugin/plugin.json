@@ -1,8 +1,8 @@
 {
-  "name": "sam-texas-commands",
+  "name": "collide-commands",
   "description": "Productivity slash commands: /catchmeup for commit summaries and /auditclaudemd for Claude Code best practices review.",
   "version": "1.0.0",
   "author": {
-    "name": "Sam Texas"
+    "name": "Digital-Wildcatters"
   }
 }

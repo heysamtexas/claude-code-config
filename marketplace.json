@@ -1,6 +1,6 @@
 {
-  "name": "sam-texas-marketplace",
-  "description": "Sam Texas's collection of specialized Claude Code agents, productivity commands, and development tools",
+  "name": "collide-marketplace",
+  "description": "Digital-Wildcatters collection of specialized Claude Code agents, productivity commands, and development tools",
   "plugins": [
     {
       "path": "plugins/gilfoyle",
@@ -23,13 +23,13 @@
       "description": "SOC 2 compliance advisor for code and infrastructure controls"
     },
     {
-      "path": "plugins/sam-texas-commands",
-      "name": "sam-texas-commands",
+      "path": "plugins/collide-commands",
+      "name": "collide-commands",
       "description": "Productivity commands: /catchmeup and /auditclaudemd"
     },
     {
-      "path": "plugins/sam-texas-devtools",
-      "name": "sam-texas-devtools",
+      "path": "plugins/collide-devtools",
+      "name": "collide-devtools",
       "description": "Development workflow hooks and custom statusline"
     },
     {
