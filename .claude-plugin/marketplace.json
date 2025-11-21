@@ -1,41 +1,37 @@
 {
   "name": "collide-marketplace",
   "description": "Digital-Wildcatters collection of specialized Claude Code agents, productivity commands, and development tools",
+  "owner": {
+    "name": "Digital-Wildcatters"
+  },
   "plugins": [
     {
-      "path": "plugins/gilfoyle",
       "name": "gilfoyle",
-      "description": "Legendary staff engineer for code review, complexity reduction, and architectural guidance"
+      "source": "plugins/gilfoyle"
     },
     {
-      "path": "plugins/copywriter",
       "name": "copywriter",
-      "description": "Technical copywriter ensuring clarity in documentation and user-facing content"
+      "source": "plugins/copywriter"
     },
     {
-      "path": "plugins/coverage-enforcer",
       "name": "coverage-enforcer",
-      "description": "Django test coverage analysis and enforcement with improvement planning"
+      "source": "plugins/coverage-enforcer"
     },
     {
-      "path": "plugins/spyros",
       "name": "spyros",
-      "description": "SOC 2 compliance advisor for code and infrastructure controls"
+      "source": "plugins/spyros"
     },
     {
-      "path": "plugins/collide-commands",
       "name": "collide-commands",
-      "description": "Productivity commands: /catchmeup and /auditclaudemd"
+      "source": "plugins/collide-commands"
     },
     {
-      "path": "plugins/collide-devtools",
       "name": "collide-devtools",
-      "description": "Development workflow hooks and custom statusline"
+      "source": "plugins/collide-devtools"
     },
     {
-      "path": "plugins/azure-observability",
       "name": "azure-observability",
-      "description": "Centralized observability for Claude Code using Azure Application Insights with full audit logging, cost tracking, and error monitoring"
+      "source": "plugins/azure-observability"
     }
   ]
 }
