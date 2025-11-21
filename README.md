@@ -70,6 +70,20 @@ If this is your only marketplace, you can omit the `@collide-marketplace` suffix
 /plugin uninstall coverage-enforcer
 ```
 
+### Updating Plugins
+
+Claude Code does not automatically update installed plugins. To get the latest versions:
+
+```bash
+# 1. Refresh the marketplace to pull latest metadata
+/plugin marketplace update collide-marketplace
+
+# 2. Reinstall plugins to get updates
+/plugin install gilfoyle
+```
+
+We recommend checking for updates periodically, especially after announcements of new features or fixes.
+
 ### Verify Installation
 
 After installing plugins, confirm they're active:
