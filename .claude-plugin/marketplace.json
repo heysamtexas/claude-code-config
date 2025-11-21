@@ -7,31 +7,31 @@
   "plugins": [
     {
       "name": "gilfoyle",
-      "source": "plugins/gilfoyle"
+      "source": "./plugins/gilfoyle"
     },
     {
       "name": "copywriter",
-      "source": "plugins/copywriter"
+      "source": "./plugins/copywriter"
     },
     {
       "name": "coverage-enforcer",
-      "source": "plugins/coverage-enforcer"
+      "source": "./plugins/coverage-enforcer"
     },
     {
       "name": "spyros",
-      "source": "plugins/spyros"
+      "source": "./plugins/spyros"
     },
     {
       "name": "collide-commands",
-      "source": "plugins/collide-commands"
+      "source": "./plugins/collide-commands"
     },
     {
       "name": "collide-devtools",
-      "source": "plugins/collide-devtools"
+      "source": "./plugins/collide-devtools"
     },
     {
       "name": "azure-observability",
-      "source": "plugins/azure-observability"
+      "source": "./plugins/azure-observability"
     }
   ]
 }
