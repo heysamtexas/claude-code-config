@@ -11,7 +11,7 @@ This repository serves dual purposes:
 - `plugins/spyros/` - SOC 2 compliance agent plugin
 - `plugins/sam-texas-commands/` - Slash commands plugin
 - `plugins/sam-texas-devtools/` - Hooks and statusline plugin
-- `marketplace.json` - Marketplace configuration
+- `.claude-plugin/marketplace.json` - Marketplace configuration
 
 ## Local Development Structure
 - `.claude/agents/` - Custom subagents for local testing
@@ -87,5 +87,5 @@ Review this CLAUDE.md file against current Claude Code best practices. Searches 
 - Each plugin lives in `plugins/<plugin-name>/`
 - Plugin manifest required: `.claude-plugin/plugin.json`
 - Maintain parallel structure in `.claude/` for local development/testing
-- Update `marketplace.json` when adding new plugins
+- Update `.claude-plugin/marketplace.json` when adding new plugins
 - Test plugins locally with `/plugin marketplace add /path/to/repo`

@@ -22,7 +22,7 @@ Before installing plugins, ensure you have:
 ### Add the Marketplace
 
 ```bash
-/plugin marketplace add samtexas/claude-code-config
+/plugin marketplace add heysamtexas/claude-code-config
 ```
 
 This creates a marketplace named **sam-texas-marketplace** based on the repository's marketplace.json.
