@@ -32,13 +32,13 @@ Use these specialized subagents proactively when their expertise is needed:
 **When to use:** Documentation, README files, error messages, API documentation, user-facing content
 **Trigger:** MUST BE USED when reviewing or creating any documentation, error messages, or text that could cause confusion for humans or AI agents.
 **Plugin:** `copywriter`
-**Files:** `.claude/agents/copywriter_subagent.md` (local), `plugins/copywriter/` (distribution)
+**Files:** `.claude/agents/copywriter.md` (local), `plugins/copywriter/` (distribution)
 
 ## coverage-enforcer
 **When to use:** Django test coverage analysis, coverage enforcement, coverage improvement planning
 **Trigger:** MUST BE USED for any coverage-related tasks, Django test analysis, or coverage improvement requests.
 **Plugin:** `coverage-enforcer`
-**Files:** `.claude/agents/coverage_subagent.md` (local), `plugins/coverage-enforcer/` (distribution)
+**Files:** `.claude/agents/coverage-enforcer.md` (local), `plugins/coverage-enforcer/` (distribution)
 
 ## spyros
 **When to use:** SOC 2 compliance review, audit preparation, control gap analysis for code and infrastructure
